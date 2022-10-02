@@ -1,7 +1,7 @@
 const MongoClient = require('mongodb').MongoClient;
 const assert = require("assert");
 
-const url = 'mongodb://localhost:27017/';
+const url = 'mongodb://localhost:2701/';
 const dbname = 'conFusion';
 
 console.log("MongoDB Example running");
@@ -47,7 +47,7 @@ MongoClient.connect(url)
         }
     )
     .then(collection => {
-            const result = collection.insertOne({"name": "Lahmacun", "description": "test"})
+            const result = collection.insertOne({"name": "Icli Kofte", "description": "test"})
             console.log("After Insert:\n");
             console.log(result.insertedId);
             return collection;
@@ -62,5 +62,6 @@ MongoClient.connect(url)
     }
 )
     .catch((err) => {
+        console.log("ERRORRR!");
         console.log(err);
     });

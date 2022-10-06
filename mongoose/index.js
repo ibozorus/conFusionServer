@@ -21,6 +21,7 @@ conn.then((db) => {
             return Dishes.remove({});
         })
         .then(() => {
-            return mongoose.conn.close()
+            return mongoose.disconnect()
         })
+    console.log(db.readyState);
 });
